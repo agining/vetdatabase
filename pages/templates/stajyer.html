@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    Hayvan Ekleme Sayfasi
+    Stajyer Ekleme Sayfası
 {% endblock %}
 
 {% block content %}
@@ -11,23 +11,23 @@
            <br> </br>
             <img class="mb-4" src="https://i.hizliresim.com/rrbq0q1.png" alt="">
             <h1 class="h3 mb-3 font-weight-normal">
-                Ise Alacaginiz Hekimin Bilgilerini Giriniz:
+                Yeni Stajyer Bilgilerini Giriniz:
             </h1>
             <br>
             {{ form.isim.label() }}
-            {{ form.isim(class="form-control", placeholder="Ismi") }}
+            {{ form.isim(class="form-control", placeholder="İsim") }}
 
             {{ form.soyisim.label() }}
-            {{ form.soyisim(class="form-control", placeholder="Soyismi") }}
+            {{ form.soyisim(class="form-control", placeholder="Soyisim") }}
 
             {{ form.email.label() }}
             {{ form.email(class="form-control", placeholder="Email") }}
 
             {{ form.sifre.label() }}
-            {{ form.sifre(class="form-control", placeholder="Sifre") }}
+            {{ form.sifre(class="form-control", placeholder="Şifre") }}
 
             {{ form.sifre2.label() }}
-            {{ form.sifre2(class="form-control", placeholder="Sifre Yeniden") }}
+            {{ form.sifre2(class="form-control", placeholder="Şifre Yeniden") }}
 
             </br>
 

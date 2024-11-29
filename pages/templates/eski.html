@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    Market Page
+    Eski Randevular
 {% endblock %}
 
 {% block content %}
@@ -10,8 +10,8 @@
                 <!-- Your Columns HERE -->
                 <th scope="col">Saat</th>
                 <th scope="col">Tarih</th>
-                <th scope="col">Hayvan No</th>
-                <th scope="col">Hekim No</th>
+                <th scope="col">Hayvan Adı</th>
+                <th scope="col">Hekim Adı</th>
             </tr>
         </thead>
         <tbody>
@@ -20,8 +20,19 @@
             <tr>
                 <td>{{ randevu.saat }}</td>
                 <td>{{ randevu.tarih }}</td>
-                <td>{{ randevu.hayvan_no }}</td>
-                <td>{{ randevu.hekim_no }}</td>
+                <td>
+                    <a href="{{ url_for('hayvan_detay', hayvan_no=randevu.hayvan_no) }}">
+                        {{ randevu.hayvan_adi }}
+                    </a>
+                </td>
+                <td>{{ randevu.hekim_adi}} {{ randevu.hekim_soyisim}}</td>
+                <td>
+                    <a href="{{ url_for('randevu_guncelle', id=randevu.id) }}" class="btn btn-warning">Güncelle</a>
+					<form action="{{ url_for('randevu_sil', id=randevu.id) }}" method="post" style="display:inline;">
+						<button type="submit" class="btn btn-danger">Sil</button>
+					</form>
+
+                </td>
             </tr>
             {%endfor%}
         </tbody>

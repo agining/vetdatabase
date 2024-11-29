@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    Hayvan Ekleme Sayfasi
+    Randevu Oluşturma Sayfası
 {% endblock %}
 
 {% block content %}
@@ -22,10 +22,10 @@
               {{ form.saat(class="form-control", placeholder="Saat Giriniz") }}
 
               {{ form.hayvanlar.label() }}
-              {{ form.hayvanlar(class="form-control", placeholder="Saat Giriniz") }}
+              {{ form.hayvanlar(class="form-control") }}
 
               {{ form.hekimler.label() }}
-              {{ form.hekimler(class="form-control", placeholder="Saat Giriniz") }}
+              {{ form.hekimler(class="form-control") }}
 
             </br>
 
